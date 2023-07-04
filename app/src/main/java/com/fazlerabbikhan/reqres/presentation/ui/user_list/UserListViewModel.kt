@@ -6,7 +6,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.fazlerabbikhan.reqres.common.Resource
-import com.fazlerabbikhan.reqres.domain.model.User
 import com.fazlerabbikhan.reqres.domain.use_case.GetUsersUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn
