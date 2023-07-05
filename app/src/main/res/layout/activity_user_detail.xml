@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent">
 
@@ -37,9 +36,7 @@ android:layout_height="match_parent">
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18sp"
-            android:textStyle="bold"
             android:layout_marginTop="16dp"
-            android:gravity="center_horizontal"
             android:text="First Name" />
 
         <!-- Last Name -->
@@ -48,9 +45,7 @@ android:layout_height="match_parent">
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18sp"
-            android:textStyle="bold"
             android:layout_marginTop="8dp"
-            android:gravity="center_horizontal"
             android:text="Last Name" />
 
         <!-- Email -->
@@ -60,7 +55,6 @@ android:layout_height="match_parent">
             android:layout_height="wrap_content"
             android:textSize="16sp"
             android:layout_marginTop="8dp"
-            android:gravity="center_horizontal"
             android:text="Email" />
 
         <!-- Support URL -->
@@ -70,7 +64,6 @@ android:layout_height="match_parent">
             android:layout_height="wrap_content"
             android:textSize="16sp"
             android:layout_marginTop="8dp"
-            android:gravity="center_horizontal"
             android:text="Support URL" />
 
         <!-- Support Text -->
@@ -80,10 +73,11 @@ android:layout_height="match_parent">
             android:layout_height="wrap_content"
             android:textSize="16sp"
             android:layout_marginTop="8dp"
-            android:gravity="center_horizontal"
             android:text="Support Text" />
 
     </LinearLayout>
+
+</androidx.cardview.widget.CardView>
 
     <!-- Loading Indicator -->
     <ProgressBar
@@ -91,8 +85,9 @@ android:layout_height="match_parent">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:visibility="gone" />
-
-</androidx.cardview.widget.CardView>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/userCardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

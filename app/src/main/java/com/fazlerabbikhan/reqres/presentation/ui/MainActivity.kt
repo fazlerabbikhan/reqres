@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         progressBar = findViewById(R.id.progressBar)
 
         // Set up RecyclerView and adapter
-        val userListAdapter = UserListAdapter()
+        val userListAdapter = UserListAdapter(this)
         userRecyclerView.adapter = userListAdapter
 
         userRecyclerView.layoutManager = LinearLayoutManager(this)
@@ -40,4 +40,3 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
-

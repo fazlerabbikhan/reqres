@@ -1,6 +1,5 @@
 package com.fazlerabbikhan.reqres.presentation.ui.user_detail
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.SavedStateHandle
@@ -9,10 +8,12 @@ import androidx.lifecycle.viewModelScope
 import com.fazlerabbikhan.reqres.common.Constants
 import com.fazlerabbikhan.reqres.common.Resource
 import com.fazlerabbikhan.reqres.domain.use_case.GetUserDetailUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
 
+@HiltViewModel
 class UserDetailViewModel @Inject constructor(
     private val getUserDetailUseCase: GetUserDetailUseCase,
     savedStateHandle: SavedStateHandle
@@ -31,7 +32,6 @@ class UserDetailViewModel @Inject constructor(
         getUserDetailUseCase(userId).onEach { result ->
             when (result) {
                 is Resource.Success -> {
-                    Log.d("UserDetailViewModel", "${result.data}")
                     _state.value = UserDetailState(user = result.data)
                 }
                 is Resource.Error -> {
