@@ -16,6 +16,7 @@ import javax.inject.Inject
 class UserListViewModel @Inject constructor(
     val getUsersUseCase: GetUsersUseCase
 ) : ViewModel() {
+
     private val _state = MutableLiveData<UserListState>()
     val state: LiveData<UserListState> = _state
 

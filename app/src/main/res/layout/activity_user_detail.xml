@@ -14,7 +14,7 @@ android:layout_height="match_parent">
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintVertical_bias="0.5"
     app:cardCornerRadius="8dp"
-    android:layout_margin="20dp"
+    android:layout_margin="16dp"
     app:cardElevation="4dp">
 
     <LinearLayout
@@ -26,8 +26,8 @@ android:layout_height="match_parent">
         <!-- Avatar Image -->
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/avatarImageView"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
             android:src="@drawable/person_avatar" />
 
         <!-- First Name -->
@@ -35,7 +35,7 @@ android:layout_height="match_parent">
             android:id="@+id/firstNameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
+            android:textSize="14sp"
             android:layout_marginTop="16dp"
             android:text="First Name" />
 
@@ -44,7 +44,7 @@ android:layout_height="match_parent">
             android:id="@+id/lastNameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
+            android:textSize="14sp"
             android:layout_marginTop="8dp"
             android:text="Last Name" />
 
@@ -53,7 +53,7 @@ android:layout_height="match_parent">
             android:id="@+id/emailTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:layout_marginTop="8dp"
             android:text="Email" />
 
@@ -62,7 +62,7 @@ android:layout_height="match_parent">
             android:id="@+id/supportUrlTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:layout_marginTop="8dp"
             android:text="Support URL" />
 
@@ -71,7 +71,7 @@ android:layout_height="match_parent">
             android:id="@+id/supportTextTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:layout_marginTop="8dp"
             android:text="Support Text" />
 
