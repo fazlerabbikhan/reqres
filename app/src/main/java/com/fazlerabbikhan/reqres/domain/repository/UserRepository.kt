@@ -1,11 +1,11 @@
 package com.fazlerabbikhan.reqres.domain.repository
 
 import com.fazlerabbikhan.reqres.data.remote.user_detail_dto.UserDetailDto
-import com.fazlerabbikhan.reqres.data.remote.user_dto.UserDto
+import com.fazlerabbikhan.reqres.data.remote.users_dto.UsersDto
 
 interface UserRepository {
 
-    suspend fun getUsers(): UserDto
+    suspend fun getUsers(): UsersDto
 
     suspend fun getUserById(userId: String): UserDetailDto
 }

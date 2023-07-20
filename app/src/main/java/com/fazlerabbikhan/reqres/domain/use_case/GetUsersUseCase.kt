@@ -1,7 +1,7 @@
 package com.fazlerabbikhan.reqres.domain.use_case
 
 import com.fazlerabbikhan.reqres.common.Resource
-import com.fazlerabbikhan.reqres.data.remote.user_dto.toUser
+import com.fazlerabbikhan.reqres.data.remote.users_dto.toUsers
 import com.fazlerabbikhan.reqres.domain.model.User
 import com.fazlerabbikhan.reqres.domain.repository.UserRepository
 import kotlinx.coroutines.flow.Flow
@@ -16,7 +16,7 @@ class GetUsersUseCase @Inject constructor(
     operator fun invoke(): Flow<Resource<List<User>>> = flow {
         try {
             emit(Resource.Loading<List<User>>())
-            val users = repository.getUsers().data.map { it.toUser() }
+            val users = repository.getUsers().toUsers()
             emit(Resource.Success<List<User>>(users))
         } catch(e: HttpException) {
             emit(Resource.Error<List<User>>(e.localizedMessage ?: "An unexpected error occurred"))

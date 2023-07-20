@@ -1,4 +1,4 @@
-package com.fazlerabbikhan.reqres.data.remote.user_dto
+package com.fazlerabbikhan.reqres.data.remote.users_dto
 
 data class Support(
     val text: String,
